@@ -163,7 +163,7 @@ openssldir = $$PWD/../../../../third_party/openssl
 LIBS += -L$$OUT_PWD/
 LIBS += -L$$pocolib -lPocoDataSQLite -lPocoData -lPocoNet -lPocoNetSSL -lPocoCrypto -lPocoUtil -lPocoXML -lPocoFoundation
 LIBS += -L$$openssldir -lssl -lcrypto
-LIBS += -lX11
+LIBS += -lX11 -lXmu
 
 INCLUDEPATH += $$PWD/../../../../third_party/jsoncpp/dist
 DEPENDPATH += $$PWD/../../../../third_party/jsoncpp/dist
