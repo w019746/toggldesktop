@@ -40,6 +40,7 @@ SOURCES += \
     ../../../toggl_api_private.cc \
     ../../../model_change.cc \
     ../../../obm_action.cc \
+    ../../../platforminfo.cc \
     ../../../project.cc \
     ../../../proxy.cc \
     ../../../rectangle.cc \
@@ -112,6 +113,7 @@ HEADERS += \
     ../../../toggl_api_private.h \
     ../../../model_change.h \
     ../../../obm_action.h \
+    ../../../platforminfo.h \
     ../../../project.h \
     ../../../proxy.h \
     ../../../rectangle.h \
