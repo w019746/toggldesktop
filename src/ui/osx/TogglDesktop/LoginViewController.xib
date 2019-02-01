@@ -16,6 +16,7 @@
                 <outlet property="loginBox" destination="4G0-sP-05G" id="sFE-3v-tOK"/>
                 <outlet property="loginButton" destination="MMO-z4-qcY" id="rI2-vR-IwO"/>
                 <outlet property="loginLink" destination="Sef-d6-OO0" id="Oiq-tf-ny7"/>
+                <outlet property="loginLoader" destination="g8Q-1F-vUK" id="utg-pB-bvZ"/>
                 <outlet property="password" destination="Sok-9q-fwV" id="lVF-3a-D5b"/>
                 <outlet property="privacyLink" destination="dfC-GB-YON" id="Awl-HC-cxp"/>
                 <outlet property="signUpBox" destination="eFn-63-UsG" id="REa-lY-WeP"/>
@@ -98,6 +99,9 @@
                                             </constraints>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="icon-google" id="vXI-OM-KgZ"/>
                                         </imageView>
+                                        <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="g8Q-1F-vUK">
+                                            <rect key="frame" x="142" y="159" width="16" height="16"/>
+                                        </progressIndicator>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MMO-z4-qcY">
                                             <rect key="frame" x="16" y="145" width="189" height="42"/>
                                             <constraints>
@@ -155,9 +159,11 @@ DQ
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Pac-Wf-TBM" firstAttribute="centerX" secondItem="94J-si-iIx" secondAttribute="centerX" id="5BD-wH-TfC"/>
+                                        <constraint firstItem="g8Q-1F-vUK" firstAttribute="centerX" secondItem="MMO-z4-qcY" secondAttribute="centerX" constant="40" id="AQt-RX-FTk"/>
                                         <constraint firstItem="XvF-yu-GZx" firstAttribute="top" secondItem="94J-si-iIx" secondAttribute="top" constant="93" id="KOi-IT-hNt"/>
                                         <constraint firstItem="XvF-yu-GZx" firstAttribute="centerY" secondItem="3Xk-yW-T0s" secondAttribute="centerY" id="fGU-Xv-4Pa"/>
                                         <constraint firstItem="XvF-yu-GZx" firstAttribute="leading" secondItem="94J-si-iIx" secondAttribute="leading" constant="25" id="fpb-LQ-yuj"/>
+                                        <constraint firstItem="g8Q-1F-vUK" firstAttribute="centerY" secondItem="MMO-z4-qcY" secondAttribute="centerY" id="gIj-07-crU"/>
                                         <constraint firstItem="Pac-Wf-TBM" firstAttribute="centerX" secondItem="0eG-O6-U2n" secondAttribute="centerX" id="lES-Hi-fmd"/>
                                     </constraints>
                                 </view>

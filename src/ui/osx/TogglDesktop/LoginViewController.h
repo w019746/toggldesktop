@@ -33,4 +33,5 @@
 @property (strong) IBOutlet NSTextFieldClickablePointer *privacyLink;
 @property (strong) IBOutlet NSButton *loginButton;
 @property (strong) IBOutlet NSButton *SignupButton;
+- (void)resetLoader;
 @end

@@ -192,6 +192,11 @@ extern void *ctx;
 	[self.errorLabel setStringValue:msg];
 	self.contentViewTop.constant = 0;
 	[self.troubleBox setHidden:NO];
+
+	if (self.loginViewController.view.superview != nil)
+	{
+		[self.loginViewController resetLoader];
+	}
 }
 
 - (void)startDisplayOnlineState:(NSNotification *)notification
