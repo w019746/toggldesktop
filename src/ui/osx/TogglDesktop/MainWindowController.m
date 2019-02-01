@@ -147,6 +147,9 @@ extern void *ctx;
 			// Close error when loging in
 			[self closeError];
 
+			// Reset login
+			[self.loginViewController resetLoader];
+
 			[self addErrorBoxConstraint];
 			[self.contentView addSubview:self.timeEntryListViewController.view];
 			[self.timeEntryListViewController.view setFrame:self.contentView.bounds];
@@ -193,6 +196,8 @@ extern void *ctx;
 	self.contentViewTop.constant = 0;
 	[self.troubleBox setHidden:NO];
 
+	// Reset loader if there is error
+	// Have to check if login is present
 	if (self.loginViewController.view.superview != nil)
 	{
 		[self.loginViewController resetLoader];

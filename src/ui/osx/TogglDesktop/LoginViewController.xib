@@ -13,10 +13,10 @@
                 <outlet property="email" destination="oP1-rJ-O83" id="h76-Hp-DQv"/>
                 <outlet property="forgotPasswordTextField" destination="jUD-k4-kTh" id="dNh-ib-nWu"/>
                 <outlet property="googleLoginTextField" destination="3Xk-yW-T0s" id="AEQ-uX-kJE"/>
+                <outlet property="loaderView" destination="g8Q-1F-vUK" id="5sD-xv-Hvl"/>
                 <outlet property="loginBox" destination="4G0-sP-05G" id="sFE-3v-tOK"/>
                 <outlet property="loginButton" destination="MMO-z4-qcY" id="rI2-vR-IwO"/>
                 <outlet property="loginLink" destination="Sef-d6-OO0" id="Oiq-tf-ny7"/>
-                <outlet property="loginLoader" destination="g8Q-1F-vUK" id="utg-pB-bvZ"/>
                 <outlet property="password" destination="Sok-9q-fwV" id="lVF-3a-D5b"/>
                 <outlet property="privacyLink" destination="dfC-GB-YON" id="Awl-HC-cxp"/>
                 <outlet property="signUpBox" destination="eFn-63-UsG" id="REa-lY-WeP"/>
@@ -52,6 +52,9 @@
                                     <outlet property="nextKeyView" destination="Sok-9q-fwV" id="9ri-zq-zcl"/>
                                 </connections>
                             </textField>
+                            <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="g8Q-1F-vUK">
+                                <rect key="frame" x="118" y="440" width="16" height="16"/>
+                            </progressIndicator>
                             <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Sok-9q-fwV">
                                 <rect key="frame" x="19" y="325" width="215" height="40"/>
                                 <constraints>
@@ -99,9 +102,6 @@
                                             </constraints>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="icon-google" id="vXI-OM-KgZ"/>
                                         </imageView>
-                                        <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="g8Q-1F-vUK">
-                                            <rect key="frame" x="142" y="159" width="16" height="16"/>
-                                        </progressIndicator>
                                         <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MMO-z4-qcY">
                                             <rect key="frame" x="16" y="145" width="189" height="42"/>
                                             <constraints>
@@ -159,11 +159,9 @@ DQ
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Pac-Wf-TBM" firstAttribute="centerX" secondItem="94J-si-iIx" secondAttribute="centerX" id="5BD-wH-TfC"/>
-                                        <constraint firstItem="g8Q-1F-vUK" firstAttribute="centerX" secondItem="MMO-z4-qcY" secondAttribute="centerX" constant="40" id="AQt-RX-FTk"/>
                                         <constraint firstItem="XvF-yu-GZx" firstAttribute="top" secondItem="94J-si-iIx" secondAttribute="top" constant="93" id="KOi-IT-hNt"/>
                                         <constraint firstItem="XvF-yu-GZx" firstAttribute="centerY" secondItem="3Xk-yW-T0s" secondAttribute="centerY" id="fGU-Xv-4Pa"/>
                                         <constraint firstItem="XvF-yu-GZx" firstAttribute="leading" secondItem="94J-si-iIx" secondAttribute="leading" constant="25" id="fpb-LQ-yuj"/>
-                                        <constraint firstItem="g8Q-1F-vUK" firstAttribute="centerY" secondItem="MMO-z4-qcY" secondAttribute="centerY" id="gIj-07-crU"/>
                                         <constraint firstItem="Pac-Wf-TBM" firstAttribute="centerX" secondItem="0eG-O6-U2n" secondAttribute="centerX" id="lES-Hi-fmd"/>
                                     </constraints>
                                 </view>
@@ -308,7 +306,9 @@ DQ
                         <constraints>
                             <constraint firstItem="jUD-k4-kTh" firstAttribute="trailing" secondItem="Sok-9q-fwV" secondAttribute="trailing" id="9Bc-Lb-jpw"/>
                             <constraint firstItem="oP1-rJ-O83" firstAttribute="trailing" secondItem="4G0-sP-05G" secondAttribute="trailing" id="ADd-nE-Xai"/>
+                            <constraint firstItem="g8Q-1F-vUK" firstAttribute="centerX" secondItem="see-BP-YQ8" secondAttribute="centerX" id="Cf4-DV-uNW"/>
                             <constraint firstItem="eFn-63-UsG" firstAttribute="bottom" secondItem="4G0-sP-05G" secondAttribute="bottom" id="FPn-ha-KtN"/>
+                            <constraint firstItem="oP1-rJ-O83" firstAttribute="top" secondItem="g8Q-1F-vUK" secondAttribute="bottom" constant="20" id="Q9t-HO-Hvr"/>
                             <constraint firstItem="oP1-rJ-O83" firstAttribute="leading" secondItem="Sok-9q-fwV" secondAttribute="leading" id="cRm-Fm-AwK"/>
                         </constraints>
                     </view>
