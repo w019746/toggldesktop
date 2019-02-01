@@ -2160,6 +2160,10 @@ Database *Context::db() const {
 }
 
 error Context::GoogleLogin(const std::string access_token) {
+    return Login(access_token, "google_access_token");
+}
+
+error Context::AsyncGoogleLogin(const std::string access_token) {
     return AsyncLogin(access_token, "google_access_token");
 }
 
