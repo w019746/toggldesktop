@@ -409,6 +409,7 @@ class Context : public TimelineDatasource {
 
     void SetOnline();
 
+    error AsyncOpenReportsInBrowser();
     error OpenReportsInBrowser();
 
     error ToSAccept();

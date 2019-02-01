@@ -3803,6 +3803,14 @@ void Context::SetSleep() {
     }
 }
 
+error Context::AsyncOpenReportsInBrowser() {
+    std::thread backgroundThread([&]() {
+        return this->OpenReportsInBrowser();
+    });
+    backgroundThread.detach();
+    return noError;
+}
+
 error Context::OpenReportsInBrowser() {
     // Do not even allow to open reports
     // else they will linger around in the app
