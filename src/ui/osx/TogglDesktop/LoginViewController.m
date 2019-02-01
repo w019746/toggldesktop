@@ -221,6 +221,9 @@ extern void *ctx;
 		return;
 	}
 
+	// Show loader and disable text boxs
+	[self showLoaderView:YES];
+
 	toggl_google_login(ctx, [auth.accessToken UTF8String]);
 }
 
