@@ -373,7 +373,8 @@ class GUI : public SyncStateMonitor {
     , lastDisplayLoginOpen(false)
     , lastDisplayLoginUserID(0)
     , lastOnlineState(-1)
-    , lastErr(noError) {}
+    , lastErr(noError)
+    , time_entry_editor_guid_("") {}
 
     ~GUI() {}
 
@@ -624,6 +625,10 @@ class GUI : public SyncStateMonitor {
         }
     }
 
+    const std::string &TimeEntryEditorGUID() {
+        return time_entry_editor_guid_;
+    }
+
  private:
     error findMissingCallbacks();
 
@@ -666,6 +671,9 @@ class GUI : public SyncStateMonitor {
     uint64_t lastDisplayLoginUserID;
     Poco::Int64 lastOnlineState;
     error lastErr;
+
+    // UI state
+    std::string time_entry_editor_guid_;
 
     Poco::Logger &logger() const;
 };
